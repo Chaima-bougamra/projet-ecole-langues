@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Cours</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        header {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                        url('assets/header.jpg') center/cover no-repeat;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .objectif-card {
+            border-left: 5px solid #0d6efd;
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+        .quiz-box {
+            padding: 20px;
+            border-radius: 10px;
+            background: #eef3ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1 id="titreLangue">Cours de Langue</h1>
+        <p id="descCourte">Apprenez facilement avec nos méthodes modernes.</p>
+    </header>
+
+    <div class="container mt-5">
+
+        <!-- Description -->
+        <h3>📘 Description du cours</h3>
+        <p id="descriptionLongue">
+            Ce cours vous permet d'apprendre la langue étape par étape,
+            avec des activités interactives et un accompagnement personnalisé.
+        </p>
+
+        <hr>
+
+        <!-- Objectifs -->
+        <h3>🎯 Objectifs du cours</h3>
+        <div id="objectifs">
+            <div class="objectif-card">✔ Apprendre les bases et les règles principales</div>
+            <div class="objectif-card">✔ S’exprimer dans des situations quotidiennes</div>
+            <div class="objectif-card">✔ Comprendre des phrases simples</div>
+        </div>
+
+        <hr>
+
+        <!-- Compétences -->
+        <h3>📚 Compétences acquises</h3>
+        <ul id="competences">
+            <li>Compréhension orale</li>
+            <li>Prononciation correcte</li>
+            <li>Lecture de textes simples</li>
+            <li>Conversation basique</li>
+        </ul>
+
+        <hr>
+
+        <!-- Programme -->
+        <h3>🕒 Programme du cours</h3>
+        <ul id="programme">
+            <li>Niveau A1 – 30 heures</li>
+            <li>Niveau A2 – 40 heures</li>
+            <li>Niveau B1 – 50 heures</li>
+        </ul>
+
+        <hr>
+
+        <!-- Témoignages -->
+        <h3>⭐ Avis des étudiants</h3>
+        <blockquote id="temoignage" class="p-3 bg-light border rounded">
+            “Très bon cours, j’ai appris rapidement !”
+        </blockquote>
+
+        <hr>
+
+        <!-- Quiz -->
+        <h3>📝 Mini Quiz (3 Questions)</h3>
+        <div class="quiz-box mt-3">
+            <p>1) Comment dit-on “Bonjour” dans cette langue ?</p>
+            <select id="q1" class="form-control mb-3">
+                <option value="">Choisir</option>
+                <option value="vrai">Bonne réponse</option>
+                <option value="faux">Mauvaise réponse</option>
+            </select>
+
+            <p>2) Trouvez le verbe : “Je mange une pomme.”</p>
+            <select id="q2" class="form-control mb-3">
+                <option value="">Choisir</option>
+                <option value="vrai">mange</option>
+                <option value="faux">pomme</option>
+            </select>
+
+            <p>3) Traduisez : “Merci”</p>
+            <select id="q3" class="form-control mb-3">
+                <option value="">Choisir</option>
+                <option value="faux">No</option>
+                <option value="vrai">Gracias</option>
+            </select>
+
+            <button class="btn btn-primary w-100 mt-3" onclick="corrigerQuiz()">Vérifier</button>
+        </div>
+
+        <hr>
+
+        <!-- Bouton inscription -->
+        <div class="text-center mb-5">
+            <a href="inscription.html" class="btn btn-success btn-lg">📌 S’inscrire à ce cours</a>
+        </div>
+
+    </div>
+
+    <script>
+        function corrigerQuiz() {
+            let score = 0;
+            if (q1.value === "vrai") score++;
+            if (q2.value === "vrai") score++;
+            if (q3.value === "vrai") score++;
+
+            alert("🎉 Votre résultat : " + score + "/3");
+        }
+    </script>
+
+</body>
+</html>

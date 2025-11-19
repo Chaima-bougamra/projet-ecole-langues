@@ -1,0 +1,112 @@
+/* Navbar */
+.navbar {
+    background-color: #007bff;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+
+.navbar .nav-link:hover {
+    color: #ffd700 !important;
+}
+
+/* Header dynamique avec zoom */
+@keyframes zoomInOut {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 130px 0;
+    min-height: 300px;
+    color: white;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/acceuill.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    animation: zoomInOut 15s infinite;
+    transform-origin: center;
+}
+
+header h1, header p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Grid des cours */
+.cours-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Cartes de cours */
+.cours-card {
+    width: 220px;
+    background-color: #f0f8ff;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cours-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Images des cartes */
+.cours-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Bouton Voir plus */
+.btn-cours {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-cours:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Couleurs différentes par langue */
+.cours-en { background-color: #e0f7fa; }
+.cours-fr { background-color: #ffe0b2; }
+.cours-es { background-color: #f8bbd0; }
+.cours-it { background-color: #dcedc8; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cours-card { width: 45%; }
+}
+
+@media (max-width: 480px) {
+    .cours-card { width: 90%; }
+}

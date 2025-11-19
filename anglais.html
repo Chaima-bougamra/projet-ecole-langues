@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anglais – École de Langues</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+/* Navbar */
+.navbar { background-color: #0d6efd; }
+.navbar .nav-link { color: white !important; font-weight: bold; }
+.navbar .nav-link:hover { color: #ffd700 !important; }
+
+/* Header dynamique avec zoom ajusté */
+header {
+    position: relative;
+    overflow: hidden;
+    height: 400px; /* Hauteur fixe */
+}
+
+header img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    animation: zoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes zoom {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.05); } /* Zoom léger */
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Contenu du cours */
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    background-color: #f0f8ff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.content h2 {
+    margin-bottom: 20px;
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+.content p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.content ul {
+    text-align: left;
+    display: inline-block;
+    list-style: square;
+    padding-left: 20px;
+}
+
+.content ul li {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Bouton retour */
+.btn-back {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-back:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand text-white" href="index.html">École de Langues</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html#accueil">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#services">Nos Cours</a></li>
+                <li class="nav-item"><a class="nav-link" href="inscription.html" target="_blank">S’inscrire</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html" target="_blank">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header dynamique uniquement avec image -->
+<header>
+    <img src="assets/eenglish.jpg" alt="Anglais">
+</header>
+
+<!-- Contenu du cours -->
+<div class="content">
+    <h2>À propos du cours</h2>
+    <p>Ce cours d’anglais est destiné à tous les niveaux : débutant, intermédiaire et avancé.</p>
+    <p>Vous apprendrez la grammaire, le vocabulaire, la compréhension orale et écrite, ainsi que l’expression orale.</p>
+
+    <h2>Modules disponibles</h2>
+    <ul>
+        <li>Module 1 : Bases de l’anglais (alphabet, prononciation, phrases courantes)</li>
+        <li>Module 2 : Grammaire et conjugaison</li>
+        <li>Module 3 : Conversation et expression orale</li>
+        <li>Module 4 : Compréhension écrite et vocabulaires thématiques</li>
+    </ul>
+
+    <a href="index.html#services" class="btn-back">⬅ Retour aux cours</a>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – École de Langues</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="index.html">École de Langues</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Titre -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">📩 Contactez-nous</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+
+                <!-- Formulaire -->
+                <form id="contactForm" class="p-4 shadow rounded bg-light">
+
+                    <!-- Nom -->
+                    <div class="mb-3">
+                        <label class="form-label">Nom :</label>
+                        <input type="text" id="contactNom" class="form-control">
+                        <small class="text-danger d-none" id="errNomContact">⚠ Le nom est obligatoire</small>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label class="form-label">Email :</label>
+                        <input type="email" id="contactEmail" class="form-control">
+                        <small class="text-danger d-none" id="errEmailContact">⚠ Email invalide</small>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="mb-3">
+                        <label class="form-label">Message :</label>
+                        <textarea id="contactMessage" class="form-control" rows="4"></textarea>
+                        <small class="text-danger d-none" id="errMsgContact">⚠ Le message est obligatoire</small>
+                    </div>
+
+                    <!-- Bouton -->
+                    <button class="btn btn-primary w-100" type="submit">Envoyer</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
